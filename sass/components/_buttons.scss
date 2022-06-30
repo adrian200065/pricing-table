@@ -1,0 +1,24 @@
+@use '../abstracts/' as *;
+
+.button {
+    color: clr(neutral, 100);
+    background-color: clr(primary, 400);
+    font-weight: $fw-700;
+    text-transform: uppercase;
+    padding: 1em 1.5em;
+    justify-self: center;
+    border: 0;
+    transition: color background-color .5s ease;
+    cursor: pointer;
+
+    &[data-type="inverted"] {
+        color: clr(primary, 400);
+        background-color: clr(neutral, 100);
+    }
+
+    &:hover,
+    &:focus {
+        color: clr(neutral, 100);
+        background-color: rgb(clr(neutral, 900), .7);
+    }
+}
